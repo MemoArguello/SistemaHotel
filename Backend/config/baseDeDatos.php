@@ -1,28 +1,29 @@
 <?php
-if(!isset($_SESSION)) 
-    { 
-        session_start(); 
+function conectardb() {
+    $servidor = 'localhost';
+    $usuario = 'root';
+    $contraseña = '';
+    $db = 'hotel';
+
+    // Establecer la conexión
+    $conexion = mysqli_connect($servidor, $usuario, $contraseña, $db);
+
+    // Verificar si la conexión fue exitosa
+    if (!$conexion) {
+        die('Error de conexión: ' . mysqli_connect_error());
     }
 
-// Define database
-define('dbhost', 'localhost');
-define('dbuser', 'root');
-define('dbpass', '');
-define('dbname', 'hotel');
+    // Configurar el juego de caracteres de la conexión
+    mysqli_set_charset($conexion, 'utf8');
 
-// Connecting database
-try {
-    $connect = new PDO("mysql:host=".dbhost."; dbname=".dbname, dbuser, dbpass);
-    $connect->query("set names utf8;");
-    // $connect->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
-    //$connect->setAttribute( PDO::ATTR_EMULATE_PREPARES, true );
-    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $connect->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    return $conexion;
 }
-catch(PDOException $e) {
-    echo $e->getMessage();
-}
-//---------------
 
+// Ejemplo de uso
+$conexion = conectardb();
 
+// Realizar operaciones con la base de datos...
+
+// Cerrar la conexión
+mysqli_close($conexion);
 ?>
