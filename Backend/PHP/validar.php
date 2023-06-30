@@ -16,14 +16,14 @@ if (isset($_POST['usuario'], $_POST['codigo'])) {
         $filas = mysqli_fetch_array($resultado);
 
         if ($filas['id_cargo'] == 1) { // Administrador
-            header("location:../../Frontend/inicio.php");
+            header("location:../../Backend/calendario/index.php");
             exit;
         } else if ($filas['id_cargo'] == 2) { // Recepcionista
             header("location:../../Frontend/inicio.php");
             exit;
         }
     } else {
-        echo "<script>alert('No existe la cuenta');
+        echo "<script>alert('No existe la cuenta'); 
         window.location.href='../../index.php'</script>";
     }
 
