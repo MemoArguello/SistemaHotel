@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../Backend/CSS/login.css">
-    <link rel="stylesheet" href="../Backend/CSS/registrar.css">
+    <link rel="stylesheet" href="../Frontend/CSS/login.css">
+    <link rel="stylesheet" href="../Frontend/CSS/registrar.css">
 </head>
 <body>
     <div class="contenedor-formulario contenedor">
