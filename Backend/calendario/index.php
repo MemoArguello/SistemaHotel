@@ -43,17 +43,16 @@ $usuario = $_SESSION['usuario'];
   ?>
 
   <section class="dashboard">
-  <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
-            <img src="../../IMG/admin.svg" alt="">
-        </div>
-    <div class="dash-content">
+    <div class="top">
       <div class="topnav" id="myTopnav">
         <a href="./index.php">Calendario</a>
         <a href="./listado_recepciones.php">Recepciones</a>
         <a href="../Recepcion/recepcionar.php">Registrar Cliente</a>
         <a href="../calendario22/listado_reserva.php">Lista de Clientes</a>
       </div>
+    </div>
+    <div class="dash-content">
+
       <?php
       include('config.php');
 
