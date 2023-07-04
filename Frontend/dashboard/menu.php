@@ -13,27 +13,27 @@
                     <i class="uil uil-calendar-alt"></i>
                     <span class="link-name">Reservas</span>
                 </a></li>
-            <li><a href="../admin/listado/form_habitaciones.php">
+            <li><a href="#">
                     <i class="uil uil-bed"></i>
                     <span class="link-name">Habitación</span>
                 </a></li>
-            <li><a href="../reportes.php">
+            <li><a href="#">
                     <i class="uil uil-file-graph"></i>
                     <span class="link-name">Reportes</span>
                 </a></li>
-            <li><a href="../producto/listado_productos.php">
+            <li><a href="#">
                     <i class="uil uil-coffee"></i>
                     <span class="link-name">Productos</span>
                 </a></li>
-            <li><a href="../ventas/ventas.php">
+            <li><a href="#">
                     <i class="uil uil-usd-circle"></i>
                     <span class="link-name">Venta</span>
                 </a></li>
-            <li><a href="../reportes_caja.php">
+            <li><a href="#">
                     <i class="uil uil-money-withdrawal"></i>
                     <span class="link-name">Caja</span>
                 </a></li>
-            <li><a href="../admin/listado/form_cuentas.php">
+            <li><a href="#">
                     <i class="uil uil-setting"></i>
                     <span class="link-name">Configuración</span>
                 </a></li>
@@ -44,8 +44,8 @@
                     <i class="uil uil-user"></i>
                     <span class="link-name"><?php echo "Usuario: $usuario"; ?></span>
                 </a>
-            </li>
-            <li><a href="../cerrar_sesion.php">
+            </li> 
+            <li><a href="#">
                     <i class="uil uil-signout"></i>
                     <span class="link-name">Cerrar Sesión</span>
                 </a></li>

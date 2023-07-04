@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../db.php';
+include '../config/baseDeDatos.php';
 
 $usuario = $_SESSION['usuario'];
 if (!isset($usuario)) {
@@ -34,91 +34,28 @@ $usuario = $_SESSION['usuario'];
     <title>Reserva</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="../CSS/registrar.css">
-    <link rel="stylesheet" href="../admin/listado/listado.css">
+    <link rel="stylesheet" href="../../Frontend/CSS/listado.css">
+    <link rel="stylesheet" href="../../Frontend/CSS/registrar.css">
+    <link rel="stylesheet" href="../../Frontend/CSS/style.css">
 </head>
 
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="../IMG/logo.svg" alt="">
-            </div>
-
-            <span class="logo_name">HOTEL</span>
-        </div>
-
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="../calendario/index.php">
-                        <i class="uil uil-calendar-alt"></i>
-                        <span class="link-name">Reservas</span>
-                    </a></li>
-                <li><a href="../admin/listado/form_habitaciones.php">
-                        <i class="uil uil-bed"></i>
-                        <span class="link-name">Habitación</span>
-                    </a></li>
-                <li><a href="../reportes.php">
-                        <i class="uil uil-file-graph"></i>
-                        <span class="link-name">Reportes</span>
-                    </a></li>
-                <li><a href="../producto/listado_productos.php">
-                        <i class="uil uil-coffee"></i>
-                        <span class="link-name">Productos</span>
-                    </a></li>
-                    <li><a href="../ventas/ventas.php">
-                        <i class="uil uil-usd-circle"></i>
-                        <span class="link-name">Venta</span>
-                    </a></li>
-                    <li><a href="../reportes_caja.php">
-                        <i class="uil uil-money-withdrawal"></i>
-                        <span class="link-name">Caja</span>
-            </a></li>
-                <li><a href="../admin/listado/form_cuentas.php">
-                        <i class="uil uil-setting"></i>
-                        <span class="link-name">Configuración</span>
-                    </a></li>
-            </ul>
-
-            <ul class="logout-mode">
-                <li><a>
-                        <i class="uil uil-user"></i>
-                        <span class="link-name"><?php echo "Usuario: $usuario"; ?></span>
-                    </a>
-                </li>
-                <li><a href="../cerrar_sesion.php">
-                        <i class="uil uil-signout"></i>
-                        <span class="link-name">Cerrar Sesión</span>
-                    </a></li>
-                <li class="mode">
-                    <div class="mode-toggle">
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-
+<?php
+  include($_SERVER['DOCUMENT_ROOT'] . '/SistemaHotel/Frontend/dashboard/menu.php');
+  ?>
     <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
-
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-            <img src="../IMG/admin.svg" alt="">
-        </div>
+    <div class="top">
+      <div class="topnav" id="myTopnav">
+        <a href="./index.php">Calendario</a>
+        <a href="./listado_recepciones.php">Recepciones</a>
+        <a href="../Recepcion/recepcionar.php">Registrar Cliente</a>
+        <a href="../calendario22/listado_reserva.php">Lista de Clientes</a>
+      </div>
+    </div>
 
         <div class="dash-content">
-            <div class="topnav" id="myTopnav">
-                <a href="../calendario/index.php">Calendario</a>
-                <a href="./listado_recepciones.php">Recepciones</a>
-                <a href="../Recepcion/recepcionar.php">Registrar Cliente</a>
-                <a href="../calendario22/listado_reserva.php">Lista de Clientes</a>
-            </div>
+            <br>
             <h1 align="center">CHECK OUT</h1>
             <table class="">
                 <thead>
