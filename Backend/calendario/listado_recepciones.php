@@ -93,7 +93,7 @@ $usuario = $_SESSION['usuario'];
                         echo "<td align= 'center'>" . $reserva['estado'] .  "</td>";
                         echo "<td>";
                         echo "<a href='./factura.php?id_recepcion=" . $reserva['id_recepcion'] . "' class='submitBotonFactura'>Factura</a>";
-                        echo "<a href='./pagado.php?id_recepcion=" . $reserva['id_recepcion'] . "' class='submitBoton'>Pagado</a>";
+                        echo "<a href='./pagado.php?id_recepcion=" . $reserva['id_recepcion'] . "' class='submitBotonPagado'>Pagado</a>";
                         echo "</td>";
                         echo "</tr>";
                     }

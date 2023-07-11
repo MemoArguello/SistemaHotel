@@ -30,6 +30,17 @@ td {
   font-size: 16px;
   border-radius: 4px;
 }
+.submitBotonPagado {
+  background-color: #4CAF50; /* verde */
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+}
 .submitBotonEliminar {
   background-color: #f44336; /* Rojo */
   border: none;
@@ -65,10 +76,10 @@ td {
   border-radius: 4px;
 }
 .submitBotonFactura {
-  background-color: #0a4cdb;
+  background-color: #ff5e00;
   border: none;
   color: rgb(255, 255, 255);
-  padding: 5px 12px;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -86,6 +97,12 @@ td {
   font-size: 16px;
   border-radius: 4px;
 }
+.submitBotonPagado:hover {
+  background-color: #2f00ff;
+  transform: translateY(2px);
+  color: rgb(255, 255, 255);
+
+}
 .submitBotonCerrar:hover {
   background-color: #ffd900;
   transform: translateY(2px);
@@ -93,7 +110,7 @@ td {
 
 }
 .submitBotonFactura:hover {
-  background-color: #00eeff;
+  background-color: #1100ff;
   transform: translateY(2px);
   color: rgb(255, 255, 255);
 
