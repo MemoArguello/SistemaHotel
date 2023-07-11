@@ -53,7 +53,7 @@ mysqli_close($conexiondb);
 
             <div class="dash-content">
                 <div class="signupFrm">
-                    <form action="../calendario22/nuevoEvento.php" method="POST" class="formRecepcion">
+                    <form action="../../Backend/cliente/nuevoCliente.php" method="POST" class="formRecepcion">
                         <h3 align="center">REGISTRAR CLIENTE</h3>
                         <br>
                         <div class="inputContainer">

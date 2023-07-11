@@ -77,8 +77,8 @@ $usuario = $_SESSION['usuario'];
                         echo "<td align= 'center'>" . $reserva['procedencia'] . "</td>";
                         echo "<td align= 'center'>" . $reserva['factura'] . "</td>";
                         echo "<td>";
-                        echo "<a href='./editar_reserva.php?id=" . $reserva['id'] . "' class='submitBoton'> Editar </a>";
-                        echo "<a href='./eliminar_reserva.php?id=" . $reserva['id'] . "' class='submitBotonEliminar'> Borrar </a>";
+                        echo "<a href='./editar_form.php?id=" . $reserva['id'] . "' class='submitBoton'> Editar </a>";
+                        echo "<a href='../../Backend/cliente/eliminar.php?id=" . $reserva['id'] . "' class='submitBotonEliminar'> Borrar </a>";
                         echo "</td>";
                         echo "</tr>";
                     }
