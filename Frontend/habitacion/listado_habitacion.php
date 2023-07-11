@@ -46,13 +46,10 @@ $usuario = $_SESSION['usuario'];
     <section class="dashboard">
         <div class="top">
             <div class="topnav" id="myTopnav">
-                <a href="../listado/form_habitaciones.php">Habitaciones Existentes</a>
-                <a href="../habitaciones/registrar_habitacion.php">Registrar Habitacion</a>
+                <a href="./listado_habitacion.php">Habitaciones Existentes</a>
+                <a href="./formulario.php">Registrar Habitacion</a>
                 <a href="../categoria/listado_categoria.php">Listado Categoria</a>
                 <a href="../categoria/categoria.php">Registrar Categorias</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
             </div>
         </div>
 
@@ -84,8 +81,8 @@ $usuario = $_SESSION['usuario'];
                         echo "<td align= 'center'>" . $habitaciones['detalles'] . "</td>";
                         echo "<td align= 'center'>" . $habitaciones['precio'] . "</td>";
                         echo "<td>";
-                        echo "<a href='../habitaciones/editar_habitacion.php?id_habitaciones=" . $habitaciones['id_habitaciones'] . "' class='submitBoton'> Editar </a>";
-                        echo "<a href='../habitaciones/eliminar_habitacion.php?id_habitaciones=" . $habitaciones['id_habitaciones'] . "' class='submitBotonEliminar'> Borrar </a>";
+                        echo "<a href='./editar.php?id_habitaciones=" . $habitaciones['id_habitaciones'] . "' class='submitBoton'> Editar </a>";
+                        echo "<a href='../../Backend/habitacion/eliminar.php?id_habitaciones=" . $habitaciones['id_habitaciones'] . "' class='submitBotonEliminar'> Borrar </a>";
                         echo "</td>";
                         echo "</tr>";
                     }
