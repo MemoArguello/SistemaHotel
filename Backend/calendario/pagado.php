@@ -1,6 +1,6 @@
 <?php
 
-include '../db.php';
+include '../../Backend/config/baseDeDatos.php';
 
 $estado        ='Pagado';
 
@@ -14,9 +14,11 @@ $respuesta = mysqli_query($conexiondb, $query);
 
 if ($respuesta) {
     echo
-    "<script>alert('Registro Exitoso');
+    "<script>alert('Cambio Agregado');
     window.location.href='./listado_recepciones.php'</script>";
-}else{ echo "<script>alert('Registro Exitoso');
+}
+else{ 
+    echo "<script>alert('Cambio Agregado');
     window.location.href='./listado_recepciones.php'</script>";
 }
 mysqli_close($conexiondb);

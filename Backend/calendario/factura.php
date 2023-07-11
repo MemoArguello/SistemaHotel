@@ -1,6 +1,6 @@
 <?php
 /*call the FPDF library*/
-require('fpdf/fpdf.php');
+require('../fpdf/fpdf.php');
 
     
 /*A4 width : 219mm*/
@@ -27,7 +27,7 @@ $pdf->Cell(59 ,5,'Detalles',0,1);
 $pdf->SetFont('Arial','',10);
 
 
-require './fpdf/conexion.php';
+require '../fpdf/conexion.php';
     $id = $_GET['id_recepcion'];
     $stmt = $connect->prepare("SELECT recepcion.id_recepcion, recepcion.id_reserva, recepcion.id_habitacion, recepcion.fecha_inicio, 
     recepcion.fecha_fin, recepcion.total_dias, recepcion.total_pagar, recepcion.pago_producto,recepcion.total,
