@@ -221,7 +221,6 @@ nav.close ~ .dashboard{
     position: fixed;
     top: 0;
     left: 250px;
-    display: flex;
     width: calc(100% - 250px);
     justify-content: space-between;
     align-items: center;

@@ -13,7 +13,7 @@
                     <i class="uil uil-calendar-alt"></i>
                     <span class="link-name">Reservas</span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="../../../SistemaHotel/Frontend/habitacion/listado_habitacion.php">
                     <i class="uil uil-bed"></i>
                     <span class="link-name">Habitación</span>
                 </a></li>
