@@ -45,11 +45,13 @@ $usuario = $_SESSION['usuario'];
                 <a href="../../Backend/calendario/index.php">Calendario</a>
                 <a href="../../Backend/calendario/listado_recepciones.php">Recepciones</a>
                 <a href="../cliente/registrar.php">Registrar Cliente</a>
-                <a href="./listado.php">Lista de Clientes</a>
+                <a href="./listadoCliente.php">Lista de Clientes</a>
             </div>
         </div>
 
         <div class="dash-content">
+        <br>
+            <h1 align="center">CLIENTES</h1>
             <table class="">
                 <thead>
                     <tr>
