@@ -77,8 +77,8 @@ mysqli_close($conexiondb);
                         echo "<td align= 'center'>" . $categoria['categoria'] . "</td>";
                         echo "<td align= 'center'>" . $categoria['piso'] . "</td>";
                         echo "<td>";
-                        echo "<a href='./editar_categoria.php?id_categoria=" . $categoria['id_categoria'] . "' class='submitBoton'> Editar </a>";
-                        echo "<a href='./eliminar_categoria.php?id_categoria=" . $categoria['id_categoria'] . "' class='submitBotonEliminar'> Borrar </a>";
+                        echo "<a href='./editarCategoria.php?id_categoria=" . $categoria['id_categoria'] . "' class='submitBoton'> Editar </a>";
+                        echo "<a href='../../Backend/categoria/eliminarCategoria.php?id_categoria=" . $categoria['id_categoria'] . "' class='submitBotonEliminar'> Borrar </a>";
                         echo "</td>";
                         echo "</tr>";
                     }

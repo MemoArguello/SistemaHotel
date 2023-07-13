@@ -16,9 +16,10 @@ $conexiondb = conectardb();
 }
 $usuario = $_SESSION['usuario'];
 $conexiondb = conectardb();
-$query = "SELECT * FROM categorias";
+$id_categoria = $_GET['id_categoria'];
+$query = "SELECT * FROM categorias where id_categoria=". $id_categoria;
 $resultado = mysqli_query($conexiondb, $query);
-mysqli_close($conexiondb);
+$categoria = mysqli_fetch_row($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ mysqli_close($conexiondb);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categoria</title>
+    <title>Habitaciones</title>
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/registrar.css">
@@ -46,25 +47,27 @@ mysqli_close($conexiondb);
     <section class="dashboard">
         <div class="top">
         <div class="topnav" id="myTopnav">
-                <a href="../habitacion/listado_habitacion.php">Habitaciones Existentes</a>
-                <a href="../habitacion/formulario.php">Registrar Habitacion</a>
-                <a href="./listadoCategoria.php">Categorias</a>
-                <a href="./RegistrarCategoria.php">Registrar Categorias</a>
+                <a href="../listado/form_habitaciones.php">Habitaciones Existentes</a>
+                <a href="../habitaciones/registrar_habitacion.php">Registrar Habitacion</a>
+                <a href="../categoria/listado_categoria.php">Listado Categoria</a>
+                <a href="categoria.php">Registrar Categorias</a>
             </div>
         </div>
 
         <div class="dash-content">
             <div class="signupFrm">
-                <form action="../../Backend/categoria/guardarCategoria.php" method="POST" class="form_categoria">
-                    <h1 class="title">Registrar Categoria</h1>
+                <form action="../../Backend/categoria/actualizarCategoria.php" method="POST" class="form_categoria">
+                    <h3 class="title">Editar Categoria</h3>
                     <div class="inputContainer">
-                        <input type="text" class="input" placeholder="a" name="nombre">
+                        <input type="text" class="input" placeholder="a" name="nombre" value='<?php echo $categoria[1]; ?>'>
                         <label for="" class="label">Nombre Categoria</label>
                     </div>
                     <div class="inputContainer">
-                        <input type="text" class="input" placeholder="a" name="piso">
+                        <input type="text" class="input" placeholder="a" name="piso" value='<?php echo $categoria[2]; ?>'>
                         <label for="" class="label">Ingrese Piso</label>
                     </div>
+                    <input type="hidden" name="categoria" id="" value='<?php echo $categoria[0] ?>' readonly>
+                    <input type="hidden" name="editar" id="" value='si' readonly>
                     <input type="submit" class="submitBtn" value="GUARDAR">
                 </form>
             </div>

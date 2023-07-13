@@ -11,7 +11,7 @@ $factura = $_POST['factura'];
 // Verificar si los campos están en blanco
 if (empty($cedula) || empty($nombre) || empty($telefono) || empty($procedencia) || empty($factura)) {
     echo "<script>alert('Por favor, complete todos los campos');
-          window.location.href='../cliente/registrar.php'</script>";
+    window.location.href='../../Frontend/cliente/listado.php'</script>";
     exit;
 }
 
