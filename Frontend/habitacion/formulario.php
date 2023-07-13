@@ -47,8 +47,8 @@ mysqli_close($conexiondb);
         <div class="topnav" id="myTopnav">
                 <a href="./listado_habitacion.php">Habitaciones Existentes</a>
                 <a href="./formulario.php">Registrar Habitacion</a>
-                <a href="../categoria/listado_categoria.php">Listado Categoria</a>
-                <a href="../categoria/categoria.php">Registrar Categorias</a>
+                <a href="../categoria/listadoCategoria.php">Categorias</a>
+                <a href="../categoria/registrarCategoria.php">Registrar Categorias</a>
             </div>
         </div>
         <div class="dash-content">
