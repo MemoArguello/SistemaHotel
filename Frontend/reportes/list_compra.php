@@ -17,11 +17,8 @@ class Conexion{
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT habitaciones.id_habitaciones, habitaciones.nombre_habitacion, habitaciones.detalles, 
-            habitaciones.id_categoria, habitaciones.precio, habitaciones.estado, categorias.id_categoria, 
-            categorias.categoria FROM habitaciones JOIN categorias 
-            ON categorias.id_categoria = habitaciones.id_categoria";
-            
+$consulta = "SELECT compra.id_compra, compra.producto, compra.id_proveedor, compra.precio, compra.cantidad, compra.total_pagar, proveedores.nombre_prov FROM compra
+JOIN proveedores ON proveedores.id_proveedor = compra.id_proveedor";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchALL(PDO::FETCH_ASSOC);

@@ -21,7 +21,7 @@
                     <i class="uil uil-file-graph"></i>
                     <span class="link-name">Reportes</span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="../../../SistemaHotel/Frontend/reportes/reporte_producto.php">
                     <i class="uil uil-coffee"></i>
                     <span class="link-name">Productos</span>
                 </a></li>

@@ -17,11 +17,10 @@ class Conexion{
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT habitaciones.id_habitaciones, habitaciones.nombre_habitacion, habitaciones.detalles, 
-            habitaciones.id_categoria, habitaciones.precio, habitaciones.estado, categorias.id_categoria, 
-            categorias.categoria FROM habitaciones JOIN categorias 
-            ON categorias.id_categoria = habitaciones.id_categoria";
-            
+$consulta = "SELECT producto.id_producto, producto.codigo, producto.nombre_producto, producto.id_proveedor,
+                    producto.precio, producto.stock_inicial, proveedores.nombre_prov, proveedores.id_proveedor FROM producto JOIN proveedores
+                    ON proveedores.id_proveedor = producto.id_proveedor";
+
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchALL(PDO::FETCH_ASSOC);
