@@ -109,6 +109,7 @@ $resultado6 = mysqli_query($conexiondb, $query6);
                 <a href="./reporte_caja.php">Reporte Caja</a>
             </div>
         </div>
+        <br>
         <div class="dash-content">
             <div class="analytics">
                 <div class="card">

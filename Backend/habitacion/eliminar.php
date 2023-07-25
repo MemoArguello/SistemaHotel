@@ -12,20 +12,20 @@ try {
 }
 finally{
     echo "<script>alert('Registros Actualizados');
-    window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 }
 $respuesta= mysqli_query($conexiondb, $query);
 
 if ($respuesta) {
     echo "<script>alert('Registro Eliminado');
-    window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 } else {
     echo "<script>alert('No se elimino el registro');
-    window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 }
 }else{
 echo "<script>alert('No se elimino el registro');
-window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 }
 
 ?>

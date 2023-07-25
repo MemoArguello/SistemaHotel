@@ -8,7 +8,7 @@ $precio = $_POST['precio'];
 
 if (empty($nombre) || empty($detalles) || empty($precio)) {
     echo "<script>alert('Por favor, complete todos los campos');
-    window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
     exit;
 }
 
@@ -20,10 +20,10 @@ $respuesta = mysqli_query($conexion, $query);
 
 if ($respuesta) {
     echo "<script>alert('Se editó correctamente');
-          window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 } else {
     echo "<script>alert('No se pudo editar');
-    window.location.href='../../Frontend/habitacion/listado_habitacion.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_habitacion.php'</script>";
 }
 
 mysqli_close($conexion);

@@ -6,7 +6,7 @@ $piso = $_POST['piso'];
 
 if (empty($categoria) || empty($piso)) {
     echo "<script>alert('Por favor, complete todos los campos');
-    window.location.href='../../Frontend/categoria/listadoCategoria.php'</script>";
+    window.location.href='../../Frontend/reportes/reportes_categoria.php'</script>";
     exit;
 }
 
@@ -18,14 +18,14 @@ try {
 
     if ($respuesta) {
         echo "<script>alert('Registro Exitoso');
-        window.location.href='../../Frontend/categoria/listadoCategoria.php'</script>";
+        window.location.href='../../Frontend/reportes/reportes_categoria.php'</script>";
     } else {
         echo "<script>alert('Registro Fallido');
-        window.location.href='../../Frontend/categoria/listadoCategoria.php'</script>";
+        window.location.href='../../Frontend/reportes/reportes_categoria.php'</script>";
     }
 } catch (Exception $e) {
     echo "<script>alert('Error al insertar en la base de datos: " . $e->getMessage() . "');
-    window.location.href='../../Frontend/categoria/listadoCategoria.php'</script>";
+    window.location.href='../../Frontend/reportes/reportes_categoria.php'</script>";
 }
 
 mysqli_close($conexiondb);

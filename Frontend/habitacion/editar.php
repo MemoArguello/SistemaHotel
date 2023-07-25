@@ -50,9 +50,9 @@ $habitacion = mysqli_fetch_row($resultado);
     <section class="dashboard">
         <div class="top">
             <div class="topnav" id="myTopnav">
-                <a href="./listado_habitacion.php">Habitaciones Existentes</a>
+                <a href="../reportes/reporte_habitacion.php">Habitaciones Existentes</a>
                 <a href="./formulario.php">Registrar Habitacion</a>
-                <a href="../categoria/listadoCategoria.php">Categorias</a>
+                <a href="../reportes/reportes_categorias.php">Habitaciones Existentes</a>
                 <a href="../categoria/registrarCategoria.php">Registrar Categorias</a>
             </div>
         </div>

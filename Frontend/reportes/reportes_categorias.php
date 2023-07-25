@@ -64,10 +64,9 @@ $usuario = $_SESSION['usuario'];
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre</th>
-                                    <th>Detalles</th>
-                                    <th>Categoria</th>
-                                    <th>Precio</th>
-                                    <th>Estado</th>
+                                    <th>Piso</th>
+                                    <th>Editar</th>
+                                    <th>Borrar</th>
                                 </tr>
                             </thead>
                         </table>
@@ -113,26 +112,29 @@ $usuario = $_SESSION['usuario'];
                         },
                     ],
                     "ajax": {
-                        "url": "list_habitacion.php",
+                        "url": "list_categoria.php",
                         "dataSrc": ""
                     },
                     "columns": [{
-                            "data": "id_habitaciones"
-                        },
-                        {
-                            "data": "nombre_habitacion"
-                        },
-                        {
-                            "data": "detalles"
+                            "data": "id_categoria"
                         },
                         {
                             "data": "categoria"
                         },
                         {
-                            "data": "precio"
+                            "data": "piso"
                         },
                         {
-                            "data": "estado"
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../categoria/editarCategoria.php?id_categoria=' + row.id_categoria + '" class="submitBoton">Editar</a>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../../Backend/categoria/eliminarCategoria.php?id_categoria=' + row.id_categoria + '" class="submitBotonEliminar">Borrar</a>';
+                            }
                         }
                     ]
                 });

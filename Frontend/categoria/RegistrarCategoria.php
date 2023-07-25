@@ -7,12 +7,12 @@ if (!isset($usuario)) {
     header("location:../../index.php");
 }
 $conexiondb = conectardb();
-    $sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
-    $result = mysqli_query($conexiondb, $sql);
-    while ($usuario= mysqli_fetch_assoc($result)) {
-        if ($usuario['id_cargo'] != 1) {
-            header("location:../../index.php");
-        }
+$sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
+$result = mysqli_query($conexiondb, $sql);
+while ($usuario = mysqli_fetch_assoc($result)) {
+    if ($usuario['id_cargo'] != 1) {
+        header("location:../../index.php");
+    }
 }
 $usuario = $_SESSION['usuario'];
 $conexiondb = conectardb();
@@ -40,15 +40,15 @@ mysqli_close($conexiondb);
 </head>
 
 <body>
-<?php
+    <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/SistemaHotel/Frontend/dashboard/menu.php');
-?>
+    ?>
     <section class="dashboard">
         <div class="top">
-        <div class="topnav" id="myTopnav">
-                <a href="../habitacion/listado_habitacion.php">Habitaciones Existentes</a>
+            <div class="topnav" id="myTopnav">
+                <a href="../reportes/reporte_habitacion.php">Habitaciones Existentes</a>
                 <a href="../habitacion/formulario.php">Registrar Habitacion</a>
-                <a href="./listadoCategoria.php">Categorias</a>
+                <a href="../reportes/reportes_categorias.php">Categorias</a>
                 <a href="./RegistrarCategoria.php">Registrar Categorias</a>
             </div>
         </div>
