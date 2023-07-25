@@ -50,7 +50,7 @@ $usuario = $_SESSION['usuario'];
         <a href="./index.php">Calendario</a>
         <a href="./listado_recepciones.php">Recepciones</a>
         <a href="../../Frontend/cliente/registrar.php">Registrar Cliente</a>
-        <a href="../../Frontend/cliente/listadoCliente.php">Lista de Clientes</a>
+        <a href="../../Frontend/reportes/reporte_cliente.php">Lista de Clientes</a>
       </div>
     </div>
 

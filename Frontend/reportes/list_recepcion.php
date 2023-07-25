@@ -18,7 +18,7 @@ $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
 $consulta ="SELECT recepcion.id_recepcion, recepcion.id_reserva, recepcion.id_habitacion, recepcion.fecha_inicio, 
-recepcion.fecha_fin, recepcion.total_dias, recepcion.total_pagar, recepcion.pago_producto,recepcion.total,
+recepcion.fecha_fin, recepcion.total_dias, recepcion.total_pagar, recepcion.pago_producto,recepcion.total, recepcion.estado,
 reserva.id, reserva.cedula, reserva.nombre, 
 habitaciones.nombre_habitacion 
 FROM recepcion JOIN reserva ON reserva.id = recepcion.id_reserva

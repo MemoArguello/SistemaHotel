@@ -10,7 +10,7 @@ $factura = $_POST['factura'];
 // Verificar si los campos están en blanco
 if (empty($cedula) || empty($nombre) || empty($telefono) || empty($procedencia) || empty($factura)) {
     echo "<script>alert('Por favor, complete todos los campos');
-          window.location.href='../../Frontend/cliente/listado.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_cliente.php'</script>";
     exit;
 }
 
@@ -23,10 +23,10 @@ $respuesta = mysqli_query($conexiondb, $query);
 
 if ($respuesta) {
     echo "<script>alert('Se actualizó correctamente');
-    window.location.href='../../Frontend/cliente/listado.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_cliente.php'</script>";
 } else {
     echo "<script>alert('Falló la actualización');
-    window.location.href='../../Frontend/cliente/listado.php'</script>";
+    window.location.href='../../Frontend/reportes/reporte_cliente.php'</script>";
 }
 
 mysqli_close($conexiondb);

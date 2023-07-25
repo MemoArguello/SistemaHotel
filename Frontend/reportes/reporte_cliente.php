@@ -48,14 +48,13 @@ $usuario = $_SESSION['usuario'];
     <section class="dashboard">
         <div class="top">
         <div class="topnav" id="myTopnav">
-                <a href="./estadisticas.php">Estadisticas</a>
-                <a href="./auditoria.php">Auditoria</a>
-                <a href="./reportes_recepcion.php">Reporte Reservas</a>
-                <a href="./reporte_habitacion.php">Reporte Habitaciones</a>
-                <a href="./reporte_cliente.php">Reporte Clientes</a>
-                <a href="./reporte_caja.php">Reporte Caja</a>
-            </div>
+                    <a href="../../Backend/calendario/index.php">Calendario</a>
+                    <a href="./reportes_recepcion.php">Recepciones</a>
+                    <a href="../cliente/registrar.php">Registrar Cliente</a>
+                    <a href="./reporte_cliente.php">Lista de Clientes</a>
+                </div>
         </div>
+        <div class="dash-content">
             <div class="container">
                 <br>
                 <div class"row">
@@ -69,12 +68,15 @@ $usuario = $_SESSION['usuario'];
                                     <th>Numero de Telefono</th>
                                     <th>Procedencia</th>
                                     <th>Factura</th>
+                                    <th>Editar</th>
+                                    <th>Borrar</th>
                                 </tr>
                             </thead>
                         </table>
                     </div>
                 </div>
             </div>
+        </div>
             <!--Jquery. popper.js, Bootstrap JS-->
             <script src="jquery/jquery-3.5.1.min.js"></script>
             <script src="popper/popper.min.js"></script>
@@ -134,10 +136,22 @@ $usuario = $_SESSION['usuario'];
                             {
                                 "data": "factura"
                             },
-                        ]
-                    });
+                            {
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../cliente/editar_form.php?id=' + row.id + '" class="submitBoton">Editar</a>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../../Backend/cliente/eliminar.php?id_cliente=' + row.id_cliente + '" class="submitBotonEliminar">Borrar</a>';
+                            }
+                        }
+                    ]
                 });
-            </script>
+            });
+        </script>
         </div>
     </section>
 

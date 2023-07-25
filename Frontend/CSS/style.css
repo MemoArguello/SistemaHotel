@@ -460,3 +460,34 @@ table.dataTable thead {
     background: linear-gradient(to right, #001f83, #3d0072);
     color: white;
 }
+.submitBoton {
+    background-color: #4CAF50; /* verde */
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  .submitBotonEliminar {
+    background-color: #f44336; /* Rojo */
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .submitBoton:hover {
+    background-color: #1100ff;
+    transform: translateY(2px);
+  }
+  .submitBotonEliminar:hover {
+    background-color: #1100ff;
+    transform: translateY(2px);
+  }

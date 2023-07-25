@@ -4,7 +4,7 @@ include '../config/baseDeDatos.php';
 
 $usuario = $_SESSION['usuario'];
 if (!isset($usuario)) {
-  header("location:../index.php");
+  header("location:../../index.php");
 }
 
 
@@ -13,7 +13,7 @@ $sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
 $resultado = mysqli_query($conexiondb, $sql);
 while ($usuario = mysqli_fetch_assoc($resultado)) {
   if ($usuario['id_cargo'] != 1) {
-    header("location:../index.php");
+    header("location:../../index.php");
   }
 }
 $usuario = $_SESSION['usuario'];
@@ -46,9 +46,9 @@ $usuario = $_SESSION['usuario'];
     <div class="top">
       <div class="topnav" id="myTopnav">
         <a href="./index.php">Calendario</a>
-        <a href="./listado_recepciones.php">Recepciones</a>
+        <a href="../../Frontend/reportes/reportes_recepcion.php">Recepciones</a>
         <a href="../../Frontend/cliente/registrar.php">Registrar Cliente</a>
-        <a href="../../Frontend/cliente/listadoCliente.php">Lista de Clientes</a>
+        <a href="../../Frontend/reportes/reporte_cliente.php">Lista de Clientes</a>
       </div>
     </div>
     <div class="dash-content">

@@ -15,11 +15,11 @@ $respuesta = mysqli_query($conexiondb, $query);
 if ($respuesta) {
     echo
     "<script>alert('Cambio Agregado');
-    window.location.href='./listado_recepciones.php'</script>";
+    window.location.href='../../Frontend/reportes/reportes_recepcion.php'</script>";
 }
 else{ 
     echo "<script>alert('Cambio Agregado');
-    window.location.href='./listado_recepciones.php'</script>";
+    window.location.href='../../Frontend/reportes/reportes_recepcion.php'</script>";
 }
 mysqli_close($conexiondb);
 

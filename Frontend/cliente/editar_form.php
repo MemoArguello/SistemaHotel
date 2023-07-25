@@ -46,7 +46,7 @@ $habitacion = mysqli_fetch_row($resultado_c);
         <div class="top">
         <div class="topnav" id="myTopnav">
                 <a href="../../Backend/calendario/index.php">Calendario</a>
-                <a href="../../Backend/calendario/listado_recepciones.php">Recepciones</a>
+                <a href="../reportes/reportes_recepcion.php">Recepciones</a>
                 <a href="../cliente/registrar.php">Registrar Cliente</a>
                 <a href="./listadoCliente.php">Lista de Clientes</a>
             </div>

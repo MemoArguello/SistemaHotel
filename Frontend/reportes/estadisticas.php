@@ -7,12 +7,12 @@ if (!isset($usuario)) {
     header("location:./index.php");
 }
 $conexiondb = conectardb();
-    $sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
-    $result = mysqli_query($conexiondb, $sql);
-    while ($usuario= mysqli_fetch_assoc($result)) {
-        if ($usuario['id_cargo'] != 1) {
-            header("location:../../index.php");
-        }
+$sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
+$result = mysqli_query($conexiondb, $sql);
+while ($usuario = mysqli_fetch_assoc($result)) {
+    if ($usuario['id_cargo'] != 1) {
+        header("location:../../index.php");
+    }
 }
 $usuario = $_SESSION['usuario'];
 
@@ -36,11 +36,11 @@ $resultado6 = mysqli_query($conexiondb, $query6);
 
 ?>
 <style>
-    
     .card-head span {
-    font-size: 3.2rem;
-    color: grey;
-}
+        font-size: 3.2rem;
+        color: grey;
+    }
+
     .card {
         box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 10%);
         background: #fff;
@@ -64,9 +64,10 @@ $resultado6 = mysqli_query($conexiondb, $query6);
         margin-top: 0.5rem;
         margin-bottom: 2rem;
     }
+
     .page-content {
-    padding: 1.3rem 1rem;
-    background: #f1f4f9;
+        padding: 1.3rem 1rem;
+        background: #f1f4f9;
     }
 </style>
 <!DOCTYPE html>
@@ -97,17 +98,14 @@ $resultado6 = mysqli_query($conexiondb, $query6);
 </head>
 
 <body>
-<?php
+    <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/SistemaHotel/Frontend/dashboard/menu.php');
-?>
+    ?>
     <section class="dashboard">
         <div class="top">
-        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
                 <a href="./estadisticas.php">Estadisticas</a>
                 <a href="./auditoria.php">Auditoria</a>
-                <a href="./reportes_recepcion.php">Reporte Reservas</a>
-                <a href="./reporte_habitacion.php">Reporte Habitaciones</a>
-                <a href="./reporte_cliente.php">Reporte Clientes</a>
                 <a href="./reporte_caja.php">Reporte Caja</a>
             </div>
         </div>
@@ -120,7 +118,7 @@ $resultado6 = mysqli_query($conexiondb, $query6);
                             echo "<td align= 'center'>" . $reserva['total1'] . ' Clientes totales' . "</td>";
                         }
                         ?>
-                            <span class="las la-user-friends"></span>
+                        <span class="las la-user-friends"></span>
                     </div>
                 </div>
                 <div class="card">
@@ -150,7 +148,7 @@ $resultado6 = mysqli_query($conexiondb, $query6);
                             echo "<td align= 'center'>" . $reserva['total4'] . ' Productos Registrados' . "</td>";
                         }
                         ?>
-                            <span class="las la-shopping-cart"></span>
+                        <span class="las la-shopping-cart"></span>
                     </div>
                 </div>
                 <div class="card">
@@ -160,7 +158,7 @@ $resultado6 = mysqli_query($conexiondb, $query6);
                             echo "<td align= 'center'>" . $reserva['total5'] . ' Gs en Ventas Realizadas' . "</td>";
                         }
                         ?>
-                            <span class="las la-money-bill"></span>
+                        <span class="las la-money-bill"></span>
                     </div>
                 </div>
                 <div class="card">
@@ -170,11 +168,11 @@ $resultado6 = mysqli_query($conexiondb, $query6);
                             echo "<td align= 'center'>" . $reserva['total6'] . ' Gs en Compras Realizadas' . "</td>";
                         }
                         ?>
-                            <span class="las la-store"></span>
+                        <span class="las la-store"></span>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <script src="./JS/script.js"></script>

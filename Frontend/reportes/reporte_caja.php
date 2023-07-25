@@ -7,12 +7,12 @@ if (!isset($usuario)) {
     header("location:../../index.php");
 }
 $conexiondb = conectardb();
-    $sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
-    $result = mysqli_query($conexiondb, $sql);
-    while ($usuario= mysqli_fetch_assoc($result)) {
-        if ($usuario['id_cargo'] != 1) {
-            header("location:../../index.php");
-        }
+$sql = "SELECT id_cargo FROM `usuarios` WHERE usuario = '$usuario';";
+$result = mysqli_query($conexiondb, $sql);
+while ($usuario = mysqli_fetch_assoc($result)) {
+    if ($usuario['id_cargo'] != 1) {
+        header("location:../../index.php");
+    }
 }
 $usuario = $_SESSION['usuario'];
 ?>
@@ -42,20 +42,18 @@ $usuario = $_SESSION['usuario'];
 </head>
 
 <body>
-<?php
+    <?php
     include($_SERVER['DOCUMENT_ROOT'] . '/SistemaHotel/Frontend/dashboard/menu.php');
-?>
+    ?>
     <section class="dashboard">
         <div class="top">
-        <div class="topnav" id="myTopnav">
+            <div class="topnav" id="myTopnav">
                 <a href="./estadisticas.php">Estadisticas</a>
                 <a href="./auditoria.php">Auditoria</a>
-                <a href="./reportes_recepcion.php">Reporte Reservas</a>
-                <a href="./reporte_habitacion.php">Reporte Habitaciones</a>
-                <a href="./reporte_cliente.php">Reporte Clientes</a>
                 <a href="./reporte_caja.php">Reporte Caja</a>
             </div>
         </div>
+        <div class="dash-content">
             <div class="container">
                 <br>
                 <div class"row">
@@ -78,78 +76,79 @@ $usuario = $_SESSION['usuario'];
                     </div>
                 </div>
             </div>
-            <!--Jquery. popper.js, Bootstrap JS-->
-            <script src="jquery/jquery-3.5.1.min.js"></script>
-            <script src="popper/popper.min.js"></script>
-            <script src="bootstrap/js/bootstrap.min.js"></script>
-            <!--Datatables JS-->
-            <script type="text/javascript" src="datatables/datatables.min.js"></script>
-            <!--Para usar botones en datatables JS-->
-            <script src="datatables/Buttons-2.3.2/js/dataTables.buttons.js"></script>
-            <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>
-            <script src="datatables/pdfmake-0.1.36/pdfmake.js"></script>
-            <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-            <script src="datatables/Buttons-2.3.2/js/buttons.html5.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('#tablaUsuarios').DataTable({
-                        //para usar botones
-                        responsive: "true",
-                        dom: 'Bfrtilp',
-                        buttons: [{
-                                extend: 'excelHtml5',
-                                text: 'Excel',
-                                titleAttr: 'Exportar a Excel',
-                                className: 'btn btn-success'
-                            },
-                            {
-                                extend: 'pdfHtml5',
-                                text: 'PDF',
-                                titleAttr: 'Exportar a PDF',
-                                className: 'btn btn-danger'
-                            },
-                            {
-                                extend: 'print',
-                                text: 'imprimir',
-                                titleAttr: 'imprimir',
-                                className: 'btn btn-info'
-                            },
-                        ],
-                        "ajax": {
-                            "url": "list_caja.php",
-                            "dataSrc": ""
+        </div>
+        <!--Jquery. popper.js, Bootstrap JS-->
+        <script src="jquery/jquery-3.5.1.min.js"></script>
+        <script src="popper/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!--Datatables JS-->
+        <script type="text/javascript" src="datatables/datatables.min.js"></script>
+        <!--Para usar botones en datatables JS-->
+        <script src="datatables/Buttons-2.3.2/js/dataTables.buttons.js"></script>
+        <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>
+        <script src="datatables/pdfmake-0.1.36/pdfmake.js"></script>
+        <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <script src="datatables/Buttons-2.3.2/js/buttons.html5.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#tablaUsuarios').DataTable({
+                    //para usar botones
+                    responsive: "true",
+                    dom: 'Bfrtilp',
+                    buttons: [{
+                            extend: 'excelHtml5',
+                            text: 'Excel',
+                            titleAttr: 'Exportar a Excel',
+                            className: 'btn btn-success'
                         },
-                        "columns": [{
-                                "data": "id_caja"
-                            },
-                            {
-                                "data": "fecha_aper"
-                            },
-                            {
-                                "data": "hora_aper"
-                            },
-                            {
-                                "data": "fecha_cierre"
-                            },
-                            {
-                                "data": "hora_cierre"
-                            },
-                            {
-                                "data": "ingreso"
-                            },
-                            {
-                                "data": "egreso"
-                            },
-                            {
-                                "data": "saldo_cierre"
-                            },
-                            {
-                                "data": "estado"
-                            },
-                        ]
-                    });
+                        {
+                            extend: 'pdfHtml5',
+                            text: 'PDF',
+                            titleAttr: 'Exportar a PDF',
+                            className: 'btn btn-danger'
+                        },
+                        {
+                            extend: 'print',
+                            text: 'imprimir',
+                            titleAttr: 'imprimir',
+                            className: 'btn btn-info'
+                        },
+                    ],
+                    "ajax": {
+                        "url": "list_caja.php",
+                        "dataSrc": ""
+                    },
+                    "columns": [{
+                            "data": "id_caja"
+                        },
+                        {
+                            "data": "fecha_aper"
+                        },
+                        {
+                            "data": "hora_aper"
+                        },
+                        {
+                            "data": "fecha_cierre"
+                        },
+                        {
+                            "data": "hora_cierre"
+                        },
+                        {
+                            "data": "ingreso"
+                        },
+                        {
+                            "data": "egreso"
+                        },
+                        {
+                            "data": "saldo_cierre"
+                        },
+                        {
+                            "data": "estado"
+                        },
+                    ]
                 });
-            </script>
+            });
+        </script>
         </div>
     </section>
 

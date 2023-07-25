@@ -1,35 +1,33 @@
 <?php
+$usuario=$_POST['usuario'];
+$codigo=md5($_POST['codigo']);
 session_start();
+$_SESSION['usuario']=$usuario;
 
-if (isset($_POST['usuario'], $_POST['codigo'])) {
-    $usuario = $_POST['usuario'];
-    $codigo = md5($_POST['codigo']);
+include '../config/baseDeDatos.php';
 
-    include '../config/baseDeDatos.php';
+$conexiondb = conectardb();
 
-    $conexiondb = conectardb();
+$consulta= "SELECT * FROM usuarios where usuario ='$usuario' and codigo='$codigo'";
+$resultado=mysqli_query($conexiondb,$consulta);
 
-    $consulta = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND codigo = '$codigo'";
-    $resultado = mysqli_query($conexiondb, $consulta);
+$filas=mysqli_fetch_array($resultado);
 
-    if ($resultado && mysqli_num_rows($resultado) > 0) {
-        $filas = mysqli_fetch_array($resultado);
-
-        if ($filas['id_cargo'] == 1) { // Administrador
-            header("location:../../Backend/calendario/index.php");
-            exit;
-        } else if ($filas['id_cargo'] == 2) { // Recepcionista
-            header("location:../../Frontend/inicio.php");
-            exit;
-        }
-    } else {
-        echo "<script>alert('No existe la cuenta'); 
+if($codigo == isset($filas['codigo'])){
+    if(($filas['id_cargo'])==1){ //administrador
+        header("location:../calendario/index.php");
+    
+    }else if(($filas['id_cargo'])==2){ //Recepcionista
+        header("location:../calendario/index.php");
+    }else{
+        echo "<script>alert('no existe cuenta');
         window.location.href='../../index.php'</script>";
     }
-
-    mysqli_free_result($resultado);
-} else {
-    echo "No se han proporcionado todos los datos necesarios.";
-    exit;
+}else{
+    echo "<script>alert('no existe cuenta');
+    window.location.href='../../index.php'</script>";
 }
+
+
+mysqli_free_result($resultado);
 ?>
