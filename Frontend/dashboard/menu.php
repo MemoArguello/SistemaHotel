@@ -25,11 +25,11 @@
                     <i class="uil uil-coffee"></i>
                     <span class="link-name">Productos</span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="../../../SistemaHotel/Frontend/ventas/formulario.php">
                     <i class="uil uil-usd-circle"></i>
                     <span class="link-name">Venta</span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="../../../SistemaHotel/Frontend/reportes/reporte_caja.php">
                     <i class="uil uil-money-withdrawal"></i>
                     <span class="link-name">Caja</span>
                 </a></li>

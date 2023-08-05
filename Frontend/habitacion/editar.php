@@ -50,10 +50,9 @@ $habitacion = mysqli_fetch_row($resultado);
     <section class="dashboard">
         <div class="top">
             <div class="topnav" id="myTopnav">
-                <a href="../reportes/reporte_habitacion.php">Habitaciones Existentes</a>
-                <a href="./formulario.php">Registrar Habitacion</a>
-                <a href="../reportes/reportes_categorias.php">Habitaciones Existentes</a>
-                <a href="../categoria/registrarCategoria.php">Registrar Categorias</a>
+                <?php
+                include($_SERVER['DOCUMENT_ROOT'] . '/SistemaHotel/Frontend/habitacion/nav.php');
+                ?>
             </div>
         </div>
         <div class="dash-content">

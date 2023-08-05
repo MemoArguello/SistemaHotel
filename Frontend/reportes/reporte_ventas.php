@@ -48,8 +48,8 @@ $usuario = $_SESSION['usuario'];
     <section class="dashboard">
         <div class="top">
             <div class="topnav" id="myTopnav">
-                <a href="./reporte_caja.php">Reporte Caja</a>
-                <a href="../../Frontend/caja/abrir_caja.php">Abrir Nueva Caja</a>
+                <a href="../ventas/formulario.php">Realizar Ventas</a>
+                <a href="../reportes/reporte_ventas.php">Listado de Ventas</a>
             </div>
         </div>
         <div class="dash-content">
@@ -61,14 +61,11 @@ $usuario = $_SESSION['usuario'];
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>fecha Apertura</th>
-                                    <th>Hora Apertura</th>
-                                    <th>Fecha Cierre</th>
-                                    <th>Hora Cierre</th>
-                                    <th>Ingreso</th>
-                                    <th>Egreso</th>
-                                    <th>Saldo Cierre</th>
-                                    <th>Estado</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Total a Pagar</th>
+                                    <th>Editar</th>
+                                    <th>Borrar</th>
                                 </tr>
                             </thead>
                         </table>
@@ -114,44 +111,39 @@ $usuario = $_SESSION['usuario'];
                         },
                     ],
                     "ajax": {
-                        "url": "list_caja.php",
+                        "url": "list_ventas.php",
                         "dataSrc": ""
                     },
                     "columns": [{
-                            "data": "id_caja"
+                            "data": "id_venta"
                         },
                         {
-                            "data": "fecha_aper"
+                            "data": "nombre_producto"
                         },
                         {
-                            "data": "hora_aper"
+                            "data": "cantidad"
                         },
                         {
-                            "data": "fecha_cierre"
+                            "data": "total_pagar"
                         },
                         {
-                            "data": "hora_cierre"
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../productos/formularioEditar.php?id_producto=' + row.id_producto + '" class="submitBoton">Editar</a>';
+                            }
                         },
                         {
-                            "data": "ingreso"
-                        },
-                        {
-                            "data": "egreso"
-                        },
-                        {
-                            "data": "saldo_cierre"
-                        },
-                        {
-                            "data": "estado"
-                        },
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../../Backend/productos/borrar.php?id_producto=' + row.id_producto + '" class="submitBotonEliminar">Borrar</a>';
+                            }
+                        }
                     ]
                 });
             });
         </script>
         </div>
     </section>
-
-
     <script src="./JS/script.js"></script>
 </body>
 
