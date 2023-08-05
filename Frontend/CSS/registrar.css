@@ -16,6 +16,7 @@ body {
 }
 
 .form_categoria {
+  margin: 5%;
   background-color: rgb(255, 255, 255);
   width: 600px;
   border-radius: 8px;
@@ -23,6 +24,7 @@ body {
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
 .form_producto {
+  margin: 5%;
   background-color: rgb(255, 255, 255);
   width: 600px;
   height: 600px;
@@ -31,9 +33,10 @@ body {
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
 .form_habitacion {
+  margin: 5%;
   background-color: rgb(255, 255, 255);
   width: 800px;
-  height: 600px;
+  height: 500px;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
@@ -51,6 +54,7 @@ body {
 }
 
 .form {
+  margin: 5%;
   text-align: center;
   background-color: white;
   width: 500px;
@@ -61,20 +65,22 @@ body {
 }
 
 .formDatos {
+  margin: 5%;
   text-align: center;
   background-color: white;
   width: 500px;
   height: 400px;
   border-radius: 8px;
-  padding: 20px 40px;
+  padding: 40px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
 }
 
 .formCaja {
+  margin: 5%;
   text-align: center;
   background-color: white;
   width: 500px;
-  height: 200px;
+  height: 300px;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .2);

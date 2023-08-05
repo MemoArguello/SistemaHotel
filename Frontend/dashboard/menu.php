@@ -33,7 +33,7 @@
                     <i class="uil uil-money-withdrawal"></i>
                     <span class="link-name">Caja</span>
                 </a></li>
-            <li><a href="#">
+            <li><a href="../../../SistemaHotel/Frontend/reportes/reporte_cuentas.php">
                     <i class="uil uil-setting"></i>
                     <span class="link-name">Configuración</span>
                 </a></li>
