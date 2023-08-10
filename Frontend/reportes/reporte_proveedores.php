@@ -52,7 +52,6 @@ $usuario = $_SESSION['usuario'];
                 <a href="../productos/formulario.php">Registrar Producto</a>
                 <a href="./reporte_proveedores.php">Proveedores</a>
                 <a href="../proveedores/formulario.php">Agregar Proveedor</a>
-                <a href="./reporte_compra.php">Compras</a>
             </div>
         </div>
         <div class="dash-content">
@@ -136,13 +135,13 @@ $usuario = $_SESSION['usuario'];
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../productos/formularioEditar.php?id_producto=' + row.id_producto + '" class="submitBoton">Editar</a>';
+                                return '<a href="../proveedores/formularioEditar.php?id_proveedor=' + row.id_proveedor + '" class="submitBoton">Editar</a>';
                             }
                         },
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../../Backend/productos/borrar.php?id_producto=' + row.id_producto + '" class="submitBotonEliminar">Borrar</a>';
+                                return '<a href="../../Backend/proveedores/eliminar.php?id_proveedor=' + row.id_proveedor + '" class="submitBotonEliminar">Borrar</a>';
                             }
                         }
                     ]

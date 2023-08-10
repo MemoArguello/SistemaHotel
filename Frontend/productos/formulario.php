@@ -51,7 +51,6 @@ mysqli_close($conexiondb);
                 <a href="./formulario.php">Registrar Producto</a>
                 <a href="../reportes/reporte_proveedores.php">Proveedores</a>
                 <a href="../proveedores/formulario.php">Agregar Proveedor</a>
-                <a href="../reportes/reporte_compra.php">Compras</a>
             </div>
         </div>
         <div class="dash-content">

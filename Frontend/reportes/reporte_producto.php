@@ -52,7 +52,6 @@ $usuario = $_SESSION['usuario'];
                 <a href="../productos/formulario.php">Registrar Producto</a>
                 <a href="./reporte_proveedores.php">Proveedores</a>
                 <a href="../proveedores/formulario.php">Agregar Proveedor</a>
-                <a href="./reporte_compra.php">Compras</a>
             </div>
         </div>
         <div class="dash-content">

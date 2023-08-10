@@ -68,6 +68,8 @@ $usuario = $_SESSION['usuario'];
                                     <th>Categoria</th>
                                     <th>Precio</th>
                                     <th>Estado</th>
+                                    <th>Editar</th>
+                                    <th>Borrar</th>
                                 </tr>
                             </thead>
                         </table>
@@ -133,6 +135,18 @@ $usuario = $_SESSION['usuario'];
                         },
                         {
                             "data": "estado"
+                        },
+                        {
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../habitacion/editar.php?id_habitaciones=' + row.id_habitaciones + '" class="submitBoton">Editar</a>';
+                            }
+                        },
+                        {
+                            "data": null,
+                            "render": function(data, type, row) {
+                                return '<a href="../../Backend/habitacion/eliminar.php?id_habitaciones=' + row.id_habitaciones + '" class="submitBotonEliminar">Borrar</a>';
+                            }
                         }
                     ]
                 });
