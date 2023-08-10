@@ -49,7 +49,7 @@ $usuario = $_SESSION['usuario'];
         <div class="top">
             <div class="topnav" id="myTopnav">
                 <a href="./reporte_cuentas.php">Cuentas Existentes</a>
-                <a href="../cuentas.php">Registrar Cuenta</a>
+                <a href="../configuracion/form_cuenta.php">Registrar Cuenta</a>
             </div>
         </div>
         <div class="dash-content">

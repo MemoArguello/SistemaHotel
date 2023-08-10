@@ -30,11 +30,11 @@ $usuario = $_SESSION['usuario'];
   <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="../../Frontend/CSS/registrar.css">
   <link rel="stylesheet" href="../../Frontend/CSS/style.css">
-
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 
 <body>

@@ -106,7 +106,6 @@ $resultado6 = mysqli_query($conexiondb, $query6);
             <div class="topnav" id="myTopnav">
                 <a href="./estadisticas.php">Estadisticas</a>
                 <a href="./auditoria.php">Auditoria</a>
-                <a href="./reporte_caja.php">Reporte Caja</a>
             </div>
         </div>
         <br>

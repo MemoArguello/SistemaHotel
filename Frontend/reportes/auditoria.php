@@ -50,7 +50,6 @@ $usuario = $_SESSION['usuario'];
             <div class="topnav" id="myTopnav">
                 <a href="./estadisticas.php">Estadisticas</a>
                 <a href="./auditoria.php">Auditoria</a>
-                <a href="./reporte_caja.php">Reporte Caja</a>
             </div>
         </div>
         <div class="dash-content">
