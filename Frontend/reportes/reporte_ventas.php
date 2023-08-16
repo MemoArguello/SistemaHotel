@@ -129,13 +129,13 @@ $usuario = $_SESSION['usuario'];
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../productos/formularioEditar.php?id_producto=' + row.id_producto + '" class="submitBoton">Editar</a>';
+                                return '<a href="../ventas/editar.php?id_venta=' + row.id_venta + '" class="submitBoton">Editar</a>';
                             }
                         },
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../../Backend/productos/borrar.php?id_producto=' + row.id_producto + '" class="submitBotonEliminar">Borrar</a>';
+                                return '<a href="../../Backend/venta/eliminar.php?id_venta=' + row.id_venta + '" class="submitBotonEliminar">Borrar</a>';
                             }
                         }
                     ]
