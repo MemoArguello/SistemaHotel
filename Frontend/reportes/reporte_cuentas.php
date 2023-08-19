@@ -130,19 +130,19 @@ $usuario = $_SESSION['usuario'];
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../productos/formularioEditar.php?id_producto=' + row.id_producto + '" class="submitBoton">Cambiar</a>';
+                                return '<a href="../productos/formularioEditar.php?id_usuario=' + row.id_usuario + '" class="submitBoton">Cambiar</a>';
                             }
                         },
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../productos/formularioEditar.php?id_producto=' + row.id_producto + '" class="submitBoton">Editar</a>';
+                                return '<a href="../cuenta/formularioEditar.php?id_usuario=' + row.id_usuario + '" class="submitBoton">Editar</a>';
                             }
                         },
                         {
                             "data": null,
                             "render": function(data, type, row) {
-                                return '<a href="../../Backend/productos/borrar.php?id_producto=' + row.id_producto + '" class="submitBotonEliminar">Borrar</a>';
+                                return '<a href="../../Backend/cuenta/eliminar_cuenta.php?id_usuario=' + row.id_usuario + '" class="submitBotonEliminar">Borrar</a>';
                             }
                         }
                     ]

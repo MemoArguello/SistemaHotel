@@ -70,7 +70,7 @@ mysqli_close($conexiondb);
         </div>
         <div class="dash-content">
             <div class="signupFrm">
-                <form action="./guardar_caja.php" method="POST" class="formCaja">
+                <form action="../../Backend/caja/guardar_caja.php" method="POST" class="formCaja">
                     <h3 align="center">Apertura de Caja</h3>
                     <br>
                     <div class="inputContainer">
